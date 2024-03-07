@@ -31,7 +31,8 @@ executable denotse
         Testing
     -- LANGUAGE extensions used by modules in this package.
     other-extensions:
-        DeriveFunctor
+        DeriveFunctor,
+        FlexibleInstances
 
     build-depends:    base ^>=4.13.0.0,
                       containers ^>=0.6.6

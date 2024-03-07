@@ -2,6 +2,10 @@
 -- | Syntax for the While language
 module Syntax where
 
+-- a tiny finite type
+-- data Var =
+--   X | Y | Z | W
+--         deriving (Eq, Show)
 type Var = String
 
 data Val = TInt Integer | TBool Bool
