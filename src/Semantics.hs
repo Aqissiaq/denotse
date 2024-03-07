@@ -100,7 +100,7 @@ big_F :: Stmt -> [(State -> Maybe State, StateSet)]
 big_F p = concatMap (big_F_aux p) [0..]
 
 exec_symb :: Stmt -> State -> [Maybe State]
-exec_symb p v = [f v | (f, b) <- big_F p, v `elem` b]
+exec_symb p v = take 1 $ [f v | (f, b) <- big_F p, v `elem` b]
 
 -- not necessary (yet), just nice
 -- incidentally, this is the first definition in section 6.1 of the "for free" paper
